@@ -9,6 +9,8 @@ services:
      links:
        - node1:node1
        - node2:node2
+     volumes:
+      - ./ansible-config:/etc/ansible
    node1:
      image: "ubuntu:16.04"
      command: tail -f /dev/null
